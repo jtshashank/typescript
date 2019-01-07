@@ -1,0 +1,287 @@
+Introduction TypeScript
+
+- Variables
+- Functions
+	1) Name Functions
+	2) Anonymous function & 
+	3) Arrow Function 
+	4) Reset Parameter Function 
+	5) Default Parameter Function
+	6) Optional Parameter Function
+
+
+- JSON (JavaScript Object Notation )
+
+	* Parsing data to easy to compare xml
+	* JSON transfer the data over the Network
+
+	
+- Clasess
+	
+	* Collection a variable or function
+	* Encapsulation of varibale & function, use to use create class keyword.
+	
+	
+- OOPS
+	1) Encapsulation
+	2) Inheritance 
+	3) Polymorphision
+	4) Abstract (Partical Implementation (if we confirm no changes in future)) 
+	5) Interfaces
+	
+=====================================================================================================
+
+Installation TypeScript
+
+	It should be install be nodejs command, so typescript repository will download from Github and install in our system.
+	
+		> npm install -g typescript@latest
+	
+	
+-------------------------------------------------------------
+
+			@ Transpilation
+		************************
+
+	- Converting the typescript to equalent Javascript called as Transpilation.
+	- "tsc" is the compiler used to perform the Transpilation.
+	
+	Then Automatically equalent JavaScript file will be generated in current path.
+	
+	
+-------------------------------------------------------------
+
+			@ Variables
+		************************	
+		
+	- Variable are used to store a data (Any type of data)
+	
+	- By using variable we can store all categories of data.
+	
+		Eg: 
+			String / number / boolean / array / object / Ajax / Promises / Observable / null / function / etc......
+			
+			
+	 > We can declare a variable using "var" & "let" keyword.
+
+	----------- 
+	  " LET "  is a keyword introduce in ES-5
+	***********
+	
+	Syntax: 
+		> var data:string = "Welcome to TypeScript"
+		
+	
+	Example: 
+	
+		* var var_one:string = "Welcome"
+		* var var_two:string = " Angular"
+		
+		*var var_three = ${var_one}
+		
+	_For print >- document.write(var_one + "....." + var_three)
+		
+		* Variable store value to access in another variable, so use "${''}"
+		
+	
+-------------------------------------------------------------------------	
+
+			@ String DataTypes
+		*************************
+		
+	(" ") / (' ') / (` `) <- [Bactick Operator]
+		
+		var var_six:string = "Welcome"
+		let var_six:string = "Welcome"
+		
+---------------------------------------------------------------------------------		
+			
+			@ Number DataTypes
+		*************************
+			-> decimal  	=> var_one:number 	= 100;
+			-> Double 		=> var_two:number 	= 120.2234;
+			-> HexaDecimal  => var_three:number = 0x.1234ASDCB;
+			-> Octal		=> var_four:number 	= 0o123;
+			-> Binary		=> var_five:number	= 0b101010;
+	
+-------------------------------------------------------------------------	
+
+			@ Boolean DataTypes
+		*************************
+
+	* Boolean has check condition - true and false
+
+-------------------------------------------------------------------------
+
+			@ Any DataTypes
+		*************************
+		
+	* We define any datatype to store anytype of data in variable.
+	
+		var storeValue:any;
+		
+		
+-------------------------------------------------------------------------
+
+			@ Array DataTypes
+		*************************
+	
+	1) var var_one: Array<number> = [10,20,30,40,50,60]
+	2) var var_two: numer[] 	  = [10,20,30,40,50,60]
+
+	// In typescript declare in two ways.
+
+-------------------------------------------------------------------------
+
+for(var i:number = 0;i<array.length; i++) {
+	document.write(array.one[i] + "....." + array_two[i] )
+}
+
+
+------------------------------------------------------------------------
+		
+		// String Array 
+	***********************
+
+	var array_three: Array<string> = []
+	var array)four : string[]
+	
+	
+
+------------------------------------------------------------------------
+	
+		// Any DataTypes Array
+	******************************
+	
+	var array_five: Array<any> = [
+		
+		{"Key" : "label", "Key1" : "label1" },
+		{"Key" : "label", "Key1" : "label1" },
+		{"Key" : "label", "Key1" : "label1"}
+	]
+	
+	for(var i:number = 0; i<array.length ; i++ ) {
+		var obj:any = array_five[i]
+		document.write(obj.key + "..." + obj.key1)
+	}
+	
+------------------------------------------------------------------------
+	
+		// JSON
+	****************
+	
+	=> JS Object Notation
+	=> Key value pair seprated by " : "
+	=> Pair Seprated by " , "
+
+
+------------------------------------------------------------------------
+
+	@ Function
+**********************
+
+=> Create 2 function but fun_one return fun_two definiton & value
+	
+e.g: 1)
+
+	function fun_one():any {
+		return fun_two;
+	}
+	
+	function fun_two():string {
+		return " Data from Database...! "
+	}
+	
+	document.write(fun_one()());
+	
+----------------------------------------------------------------------
+
+Create the four function @fun_one, @fun_two, @fun_three, @fun_four
+	
+	"fun_two" return following msg " Angular 7"
+	"fun_three" return following msg " NodeJs"
+	"fun_four" return following msg "MongoDB"
+	
+	Pass "fun_two" & "fun_three" & "fun_four" define under to "fun_one" as argument.
+	The return type of fun_one is void called  the fun.
+	
+e.g: 2) 
+
+	// function two example
+
+    function fun_one(arg1:any, arg2:any, arg3:any) : void {
+        document.write( arg1() + arg2() + arg3() )
+    }
+    function fun_two():string {
+        return "Angular 7";
+    }
+    function fun_three():string {
+        return "NodeJs";
+    }
+    function fun_four():string {
+        return " MongoDB" ;
+    }
+
+// Pass the arrgument under function of fun_one
+    fun_one(fun_two, fun_three, fun_four);
+
+----------------------------------------------------------------------
+
+Example : 3rd 
+ ---------
+
+Create one function to Pass Number from 1 to 10 in forward order as well as reverse order to array. 
+
+ var my_array:Array<number> = [];
+
+    for(var i:number = 0; i <= 10; i++) {
+        my_array.push(i);
+        my_array.unshift(i);
+    }
+
+    for(var i:number = 0; i < my_array.length; i++) {
+          document.write(my_array[i]);
+    }
+----------------------------------------------------------------------
+
+Example : 4th
+ ---------
+	
+	var my_arrayy:Array<any> = [];
+
+    function fun_onec():string {
+        return " Welcome to name Function";
+    };
+    for(var i:number = 0; i<5; i++) {
+        my_arrayy.push(fun_onec);
+    }
+    for(var i:number=0; i<my_arrayy.length; i++) {
+        document.write(my_arrayy[i]())
+    }
+	
+----------------------------------------------------------------------
+
+Example : 5th
+ ---------
+		
+	
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
