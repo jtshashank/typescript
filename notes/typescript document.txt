@@ -264,20 +264,98 @@ Example : 4th
 Example : 5th
  ---------
 
- 
+
+--------------------------------------------------------------------
+Example : 6th
+ ---------
+
+Create the follow name function
+@fun_one, @fun_two, @fun_three..
+
+@fun_two return following message " MongoDB"
+@fun_three return following message "CouchDB"
+
+Create the array with fun_two() & fun_three() & pass the array  to fun_one() as argument call the fun_one().
 		
 
+// Function Sixth example
+
+function fun_onee(arg1:Array<any>): any {
+    for(var i:number=0; i < arg1.length; i++) {
+        document.write(arg1[i] + "<br>");
+    }
+}
+
+function fun_twoo(){
+    return "MongoDB"
+}
+function fun_threee(){
+    return "CouchDB"
+}
+
+var my_array: Array<any> = [fun_twoo(), fun_threee()]
+
+/* Pass argument */ ==>  fun_onee(my_array);
 
 
 
+/==========================================================================
+         ****** @ Anonymous Function ******
+===========================================================================/
+
+- The function without name called as Anonymous function.
+- Any function also called as Arrow function.
+- We can represent Arrow function using ( " => " ).
+- Arrow function as were secured.
+
+Syntax:  
+======
+
+var variable = (arguments with datatype):return type => {
+	// Business logic
+}
+
+**** **** ****
+exp: 
+
+- Create the Arrow function with the following variable.
+- Arrow function return following message: "Data from Database soon..!"
+
+- Call the Arrow function
+===========================
+
+var fun_one = ():string => {
+    return "Data from database soon..!"
+}
+document.write(fun_one())
+
+-------------------------------------------------------
+exp: 2
+======	
+	One Arrow function return another Arrow function.
+	Inner arrow function return following message => "Data from database soon..!"
+
+var fun_one = ():any => {
+    return () => {
+        return "Data from database soon..!"
+    }
+}
+console.log(fun_one()());
+
+------------------------------------------------------------
+exp: 3
+======
+
+- Create the following arrow function. 
+	@dbfun with two function,  @success Callback function,  @errorCallback function
+
+"SuccessCallback" will return "Success....!" message.
+"errorCallback" function will return "Error" message.
+
+Pass "SuccessCallback" & "errorCallback" Definition to dbFun() as argument.
 
 
 
-
-		
-		
-		
-		
 		
 		
 		
